@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.tyebile</groupId>
+    <artifactId>meereen</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>meereen-authorization</module>
+        <module>meereen-system</module>
+        <module>meereen-commons</module>
+        <module>meereen-orm</module>
+        <module>meereen-utils</module>
+        <module>meereen-core</module>
+    </modules>
+    <packaging>pom</packaging>
+
+    <name>meereen</name>
+    <url>http://www.tyebile.com</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.build.locales>zh_CN</project.build.locales>
+
+        <java.version>1.8</java.version>
+        <project.build.jdk>${java.version}</project.build.jdk>
+
+        <spring.boot.version>1.4.5.RELEASE</spring.boot.version>
+
+        <javassist.version>3.20.0-GA</javassist.version>
+
+        <fastjson.version>1.2.32</fastjson.version>
+        <mysql.version>5.1.39</mysql.version>
+        <cglib.version>3.2.2</cglib.version>
+        <aspectj.version>1.6.12</aspectj.version>
+        <hibernate.validator.version>5.1.1.Final</hibernate.validator.version>
+
+        <meereen.orm.version>1.0-SNAPSHOT</meereen.orm.version>
+        <meereen.utils.version>1.0-SNAPSHOT</meereen.utils.version>
+        <hsweb.expands.version>3.0.2-SNAPSHOT</hsweb.expands.version>
+
+        <swagger.version>2.7.0</swagger.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-all</artifactId>
+            <version>1.10.19</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.1.7</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.16.18</version>
+            </dependency>
+            <dependency>
+                <groupId>io.reactivex.rxjava2</groupId>
+                <artifactId>rxjava</artifactId>
+                <version>2.1.8</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jooq</groupId>
+                <artifactId>jool-java-8</artifactId>
+                <version>0.9.13</version>
+            </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.12</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.swagger</groupId>
+                <artifactId>swagger-annotations</artifactId>
+                <version>1.5.10</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson</artifactId>
+                <version>3.5.5</version>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-beanutils</groupId>
+                <artifactId>commons-beanutils</artifactId>
+                <version>1.9.3</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring.boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.tyebile</groupId>
+                <artifactId>meereen-utils</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.tyebile</groupId>
+                <artifactId>meereen-orm</artifactId>
+                <version>${meereen.orm.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.hswebframework</groupId>
+                        <artifactId>hsweb-expands-script</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>com.alibaba</groupId>
+                        <artifactId>fastjson</artifactId>
+                    </exclusion>
+                </exclusions>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.hswebframework</groupId>
+                <artifactId>hsweb-expands</artifactId>
+                <version>${hsweb.expands.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.springframework</groupId>
+                        <artifactId>spring-expression</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>com.alibaba</groupId>
+                        <artifactId>fastjson</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>com.tyebile</groupId>
+                <artifactId>meereen-utils</artifactId>
+                <version>${meereen.utils.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <distributionManagement>
+        <repository>
+            <id>maven-releases</id>
+            <name>Internal Releases</name>
+            <url>http://localhost:9001/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>maven-snapshots</id>
+            <name>Internal Snapshots</name>
+            <url>http://localhost:9001/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+</project>

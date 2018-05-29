@@ -1,10 +1,10 @@
-package org.hswebframework.utils.file;
+package com.tyebile.meereen.utils.file;
 
 
-import org.hswebframework.utils.StringUtils;
-import org.hswebframework.utils.file.callback.ReadCallBack;
-import org.hswebframework.utils.file.callback.ReadStringCallBack;
-import org.hswebframework.utils.file.callback.ScanCallBack;
+import com.tyebile.meereen.utils.StringUtils;
+import com.tyebile.meereen.utils.file.callback.ReadCallBack;
+import com.tyebile.meereen.utils.file.callback.ReadStringCallBack;
+import com.tyebile.meereen.utils.file.callback.ScanCallBack;
 
 import java.io.*;
 

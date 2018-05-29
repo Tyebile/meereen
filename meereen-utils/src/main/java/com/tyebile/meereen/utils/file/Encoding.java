@@ -1,4 +1,4 @@
-package org.hswebframework.utils.file;
+package com.tyebile.meereen.utils.file;
 
 class Encoding {
 	// Supported Encoding Types

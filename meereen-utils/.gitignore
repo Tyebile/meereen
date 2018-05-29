@@ -1,0 +1,4 @@
+#Mac OS ignore IntelliJ idea file
+.DS_Store
+.idea/
+/**/*.iml

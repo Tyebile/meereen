@@ -1,4 +1,4 @@
-package org.hswebframework.utils.time;
+package com.tyebile.meereen.utils.time;
 
 import org.joda.time.DateTime;
 import org.joda.time.format.DateTimeFormat;

@@ -1,4 +1,4 @@
-package org.hswebframework.utils;
+package com.tyebile.meereen.utils;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;

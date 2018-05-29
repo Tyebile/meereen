@@ -1,4 +1,4 @@
-package org.hswebframework.utils;
+package com.tyebile.meereen.utils;
 
 import net.sourceforge.pinyin4j.PinyinHelper;
 import net.sourceforge.pinyin4j.format.HanyuPinyinCaseType;

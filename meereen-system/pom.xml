@@ -9,8 +9,11 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.tyebile</groupId>
     <artifactId>meereen-system</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>meereen-system-authorization</module>
+    </modules>
 
 
 </project>
