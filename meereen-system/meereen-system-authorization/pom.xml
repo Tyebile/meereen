@@ -13,7 +13,6 @@
     <packaging>pom</packaging>
     <modules>
         <module>meereen-system-authorization-service</module>
-        <module>meereen-system-authorization-service-api</module>
     </modules>
 
 

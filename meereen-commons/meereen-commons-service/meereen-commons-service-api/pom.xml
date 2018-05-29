@@ -12,10 +12,10 @@
     <artifactId>meereen-commons-service-api</artifactId>
 
     <dependencies>
-        <!--<dependency>-->
-            <!--<groupId>com.tyebile</groupId>-->
-            <!--<artifactId>hsweb-commons-dao-api</artifactId>-->
-            <!--<version>${project.version}</version>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>com.tyebile</groupId>
+            <artifactId>meereen-commons-dao-api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
     </dependencies>
 </project>
