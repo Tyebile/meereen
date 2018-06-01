@@ -3,22 +3,17 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>meereen</artifactId>
+        <artifactId>meereen-boost</artifactId>
         <groupId>com.tyebile</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>meereen-commons</artifactId>
+    <artifactId>meereen-boost-validator</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>meereen-commons-service</module>
-        <module>meereen-commons-dao</module>
-        <module>meereen-commons-entity</module>
-        <module>meereen-commons-bean</module>
-        <module>meereen-commons-utils</module>
-        <module>meereen-commons-controller</module>
-        <module>meereen-commons-model</module>
+        <module>meereen-boost-validator-api</module>
+        <module>meereen-boost-validator-group</module>
     </modules>
 
 
