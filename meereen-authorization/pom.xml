@@ -12,6 +12,14 @@
     <groupId>com.tyebile</groupId>
     <artifactId>meereen-authorization</artifactId>
     <packaging>pom</packaging>
+    <modules>
+        <module>meereen-authorization-api</module>
+        <module>meereen-authorization-basic</module>
+        <module>meereen-authorization-cloud</module>
+        <module>meereen-authorization-jwt</module>
+        <module>meereen-authorization-ldap</module>
+        <module>meereen-authorization-oauth2</module>
+    </modules>
 
 
 </project>

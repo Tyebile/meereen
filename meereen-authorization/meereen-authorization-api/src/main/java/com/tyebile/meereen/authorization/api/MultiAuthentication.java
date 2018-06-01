@@ -16,39 +16,34 @@
  *
  */
 
-package com.tyebile.meereen.boost.validator.api;
+package com.tyebile.meereen.authorization.api;
 
-
-import java.io.Serializable;
+import java.util.Set;
 
 /**
- * 重复数据验证配置
+ * 多用户权限,可同时登录多个用户,调用{@link Authentication}的方法为获取当前激活用户的权限
  *
- * @author zhouhao
+ * @since 3.0
  */
-public interface DuplicateValidatorConfig extends Serializable {
+public interface MultiAuthentication extends Authentication {
+
     /**
-     * 对数据的操作事件
+     * @return 所有权限信息
+     */
+    Set<Authentication> getAuthentications();
+
+    /**
+     * 激活指定的用户
      *
-     * @return 操作事件
-     * @see com.tyebile.meereen.authorization.api.Permission#ACTION_UPDATE
-     * @see com.tyebile.meereen.authorization.api.Permission#ACTION_ADD
+     * @param userId 用户ID
+     * @return 被激活的用户, 如果用户未登录, 则返回null
      */
-    String getAction();
+    Authentication activate(String userId);
 
     /**
-     * @return 验证未通过时返回的消息
+     * 添加一个授权
+     *
+     * @param authentication 授权信息
      */
-    String getErrorMessage();
-
-    /**
-     * @return 验证方式
-     */
-    String getType();
-
-    interface DefaultType {
-        String SCRIPT = "SCRIPT";
-        String FIELDS = "FIELDS";
-        String CUSTOM = "CUSTOM";
-    }
+    void addAuthentication(Authentication authentication);
 }

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.tyebile</groupId>
+    <artifactId>meereen-expands</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>meereen-expands-compress</module>
+        <module>meereen-expands-office</module>
+        <module>meereen-expands-request</module>
+        <module>meereen-expands-script</module>
+        <module>meereen-expands-security</module>
+        <module>meereen-expands-shell</module>
+        <module>meereen-expands-template</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.build.locales>zh_CN</project.build.locales>
+        <project.build.jdk>1.8</project.build.jdk>
+
+        <junit.version>4.11</junit.version>
+        <spring.version>4.0.6.RELEASE</spring.version>
+        <slf4j.version>1.7.21</slf4j.version>
+        <logback.version>1.1.7</logback.version>
+
+        <meereen.utils.version>1.0-SNAPSHOT</meereen.utils.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.tyebile</groupId>
+                <artifactId>meereen-utils</artifactId>
+                <version>${meereen.utils.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.tyebile</groupId>
+                <artifactId>meereen-expands-compress</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.tyebile</groupId>
+                <artifactId>meereen-expands-office</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.tyebile</groupId>
+                <artifactId>meereen-expands-request</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.tyebile</groupId>
+                <artifactId>meereen-expands-secutity</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.tyebile</groupId>
+                <artifactId>meereen-expands-shell</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.tyebile</groupId>
+                <artifactId>meereen-expands-template</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.tyebile</groupId>
+                <artifactId>meereen-expands-script</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-beanutils</groupId>
+                <artifactId>commons-beanutils</artifactId>
+                <version>1.9.3</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-classic</artifactId>
+                <version>${logback.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.codehaus.groovy</groupId>
+                <artifactId>groovy-all</artifactId>
+                <version>2.1.7</version>
+            </dependency>
+            <!--ognl-->
+            <dependency>
+                <groupId>ognl</groupId>
+                <artifactId>ognl</artifactId>
+                <version>3.1</version>
+            </dependency>
+
+            <!--spel-->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-expression</artifactId>
+                <version>4.0.6.RELEASE</version>
+                <optional>true</optional>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <distributionManagement>
+        <repository>
+            <id>maven-releases</id>
+            <name>Internal Releases</name>
+            <url>http://localhost:9001/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>maven-snapshots</id>
+            <name>Internal Snapshots</name>
+            <url>http://localhost:9001/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+</project>
