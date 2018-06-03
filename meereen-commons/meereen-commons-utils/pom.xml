@@ -37,8 +37,8 @@
             <optional>true</optional>
         </dependency>
         <dependency>
-            <groupId>org.hswebframework</groupId>
-            <artifactId>hsweb-expands-script</artifactId>
+            <groupId>com.tyebile</groupId>
+            <artifactId>meereen-expands-script</artifactId>
             <optional>true</optional>
         </dependency>
         <dependency>

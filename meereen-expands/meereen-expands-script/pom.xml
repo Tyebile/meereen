@@ -19,12 +19,12 @@
         </dependency>
 
         <dependency>
-            <groupId>org.hswebframework</groupId>
-            <artifactId>hsweb-utils</artifactId>
+            <groupId>com.tyebile</groupId>
+            <artifactId>meereen-utils</artifactId>
         </dependency>
         <dependency>
             <groupId>com.tyebile</groupId>
-            <artifactId>meereen-expands-secutity</artifactId>
+            <artifactId>meereen-expands-security</artifactId>
             <version>${project.version}</version>
         </dependency>
         <!-- log start -->
