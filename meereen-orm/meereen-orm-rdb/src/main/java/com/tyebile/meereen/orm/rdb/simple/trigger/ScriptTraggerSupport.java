@@ -1,7 +1,7 @@
 package com.tyebile.meereen.orm.rdb.simple.trigger;
 
-import org.hswebframework.expands.script.engine.DynamicScriptEngine;
-import org.hswebframework.expands.script.engine.ExecuteResult;
+import com.tyebile.meereen.expands.script.DynamicScriptEngine;
+import com.tyebile.meereen.expands.script.ExecuteResult;
 import com.tyebile.meereen.orm.core.Trigger;
 import com.tyebile.meereen.orm.rdb.exception.TriggerException;
 import com.tyebile.meereen.utils.StringUtils;

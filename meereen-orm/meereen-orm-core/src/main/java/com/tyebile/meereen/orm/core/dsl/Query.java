@@ -132,10 +132,12 @@ public final class Query<T, Q extends QueryParam> extends SqlConditionSupport<Qu
         return executor.doExecute(param);
     }
 
+    @Override
     public NestConditional<Query<T, Q>> nest() {
         return new SimpleNestConditional<>(this, this.param.nest());
     }
 
+    @Override
     public NestConditional<Query<T, Q>> nest(String column, Object value) {
         return new SimpleNestConditional<>(this, this.param.nest(column, value));
     }

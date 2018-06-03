@@ -1,8 +1,8 @@
 package com.tyebile.meereen.commons.utils;
 
-import org.hswebframework.expands.script.engine.DynamicScriptEngine;
-import org.hswebframework.expands.script.engine.DynamicScriptEngineFactory;
-import org.hswebframework.expands.script.engine.ExecuteResult;
+import com.tyebile.meereen.expands.script.DynamicScriptEngine;
+import com.tyebile.meereen.expands.script.DynamicScriptEngineFactory;
+import com.tyebile.meereen.expands.script.ExecuteResult;
 
 import java.util.HashMap;
 import java.util.Map;

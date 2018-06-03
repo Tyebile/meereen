@@ -1,7 +1,7 @@
 package com.tyebile.meereen.commons.utils;
 
 import org.apache.commons.beanutils.BeanMap;
-import org.hswebframework.utils.time.DateFormatter;
+import com.tyebile.meereen.utils.time.DateFormatter;
 
 import java.util.*;
 import java.util.function.Function;

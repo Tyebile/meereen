@@ -26,6 +26,16 @@
             <artifactId>meereen-orm-rdb</artifactId>
         </dependency>
         <dependency>
+            <groupId>com.tyebile</groupId>
+            <artifactId>meereen-logging-api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.tyebile</groupId>
+            <artifactId>meereen-authorization-api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
         </dependency>

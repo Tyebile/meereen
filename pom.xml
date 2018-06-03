@@ -16,7 +16,9 @@
         <module>meereen-core</module>
         <module>meereen-boost</module>
         <module>meereen-expands</module>
-        <module>meereen-expands</module>
+        <module>meereen-starter</module>
+        <module>meereen-datasource</module>
+        <module>meereen-logging</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -42,7 +44,7 @@
 
         <meereen.orm.version>1.0-SNAPSHOT</meereen.orm.version>
         <meereen.utils.version>1.0-SNAPSHOT</meereen.utils.version>
-        <hsweb.expands.version>3.0.2-SNAPSHOT</hsweb.expands.version>
+        <meereen.expands.version>1.0-SNAPSHOT</meereen.expands.version>
 
         <swagger.version>2.7.0</swagger.version>
     </properties>
@@ -149,8 +151,8 @@
                 <version>${meereen.orm.version}</version>
                 <exclusions>
                     <exclusion>
-                        <groupId>org.hswebframework</groupId>
-                        <artifactId>hsweb-expands-script</artifactId>
+                        <groupId>com.tyebile</groupId>
+                        <artifactId>meereen-expands-script</artifactId>
                     </exclusion>
                     <exclusion>
                         <groupId>com.alibaba</groupId>
@@ -162,9 +164,9 @@
             </dependency>
 
             <dependency>
-                <groupId>org.hswebframework</groupId>
-                <artifactId>hsweb-expands</artifactId>
-                <version>${hsweb.expands.version}</version>
+                <groupId>com.tyebile</groupId>
+                <artifactId>meereen-expands-script</artifactId>
+                <version>${project.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
                 <exclusions>
@@ -186,6 +188,19 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
     <distributionManagement>
         <repository>

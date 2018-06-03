@@ -36,6 +36,7 @@
             <artifactId>aspectjweaver</artifactId>
             <optional>true</optional>
         </dependency>
+
         <dependency>
             <groupId>com.tyebile</groupId>
             <artifactId>meereen-expands-script</artifactId>
