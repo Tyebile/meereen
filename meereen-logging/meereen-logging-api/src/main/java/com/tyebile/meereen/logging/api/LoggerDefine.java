@@ -1,6 +1,10 @@
 package com.tyebile.meereen.logging.api;
 
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 public class LoggerDefine {
     private String action;
 
@@ -9,22 +13,6 @@ public class LoggerDefine {
     public LoggerDefine(String action,String describe){
         this.action=action;
         this.describe=describe;
-    }
-
-    public String getDescribe() {
-        return describe;
-    }
-
-    public void setAction(String action) {
-        this.action = action;
-    }
-
-    public String getAction() {
-        return action;
-    }
-
-    public void setDescribe(String describe) {
-        this.describe = describe;
     }
 }
 
