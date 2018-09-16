@@ -1,21 +1,3 @@
-/*
- *
- *  * Copyright 2016 http://www.hswebframework.org
- *  *
- *  * Licensed under the Apache License, Version 2.0 (the "License");
- *  * you may not use this file except in compliance with the License.
- *  * You may obtain a copy of the License at
- *  *
- *  *     http://www.apache.org/licenses/LICENSE-2.0
- *  *
- *  * Unless required by applicable law or agreed to in writing, software
- *  * distributed under the License is distributed on an "AS IS" BASIS,
- *  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *  * See the License for the specific language governing permissions and
- *  * limitations under the License.
- *
- */
-
 package com.tyebile.meereen.commons.controller.message;
 
 
@@ -28,7 +10,8 @@ import java.lang.reflect.Field;
 import java.util.*;
 
 /**
- * 响应消息。controller中处理后，返回此对象，响应请求结果给客户端。
+ * 响应消息,controller中处理后，返回此对象，响应请求结果给客户端。
+ *
  */
 @ApiModel(description = "响应结果")
 public class ResponseMessage<T> implements Serializable {
@@ -41,6 +24,8 @@ public class ResponseMessage<T> implements Serializable {
     protected int status;
 
     private Long timestamp;
+
+    private String code;
 
     @ApiModelProperty("调用结果消息")
     public String getMessage() {
@@ -60,6 +45,11 @@ public class ResponseMessage<T> implements Serializable {
     @ApiModelProperty(value = "时间戳", required = true, dataType = "Long")
     public Long getTimestamp() {
         return timestamp;
+    }
+
+    @ApiModelProperty(value = "业务代码")
+    public String getCode() {
+        return code;
     }
 
     public static <T> ResponseMessage<T> error(String message) {
@@ -91,6 +81,12 @@ public class ResponseMessage<T> implements Serializable {
 
     public ResponseMessage<T> result(T result) {
         this.result = result;
+        return this;
+    }
+
+
+    public ResponseMessage<T> code(String code) {
+        this.code = code;
         return this;
     }
 
@@ -127,7 +123,7 @@ public class ResponseMessage<T> implements Serializable {
                     if (field1 != null) {
                         include(field1.getType(), tmp[1]);
                     }
-                } catch (Throwable e) {
+                } catch (Exception ignore) {
                 }
             } else {
                 getStringListFromMap(includes, type).add(field);
@@ -151,7 +147,7 @@ public class ResponseMessage<T> implements Serializable {
                     if (field1 != null) {
                         exclude(field1.getType(), tmp[1]);
                     }
-                } catch (Throwable e) {
+                } catch (Exception ignore) {
                 }
             } else {
                 getStringListFromMap(excludes, type).add(field);
