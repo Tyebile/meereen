@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>meereen-authorization-api</artifactId>
+    <artifactId>meereen-authorization-basic</artifactId>
     <build>
         <plugins>
             <plugin>
@@ -26,13 +26,12 @@
     <dependencies>
         <dependency>
             <groupId>com.tyebile</groupId>
-            <artifactId>meereen-core</artifactId>
+            <artifactId>meereen-authorization-api</artifactId>
             <version>${project.version}</version>
         </dependency>
-
         <dependency>
             <groupId>com.tyebile</groupId>
-            <artifactId>meereen-commons-entity</artifactId>
+            <artifactId>meereen-commons-controller</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>

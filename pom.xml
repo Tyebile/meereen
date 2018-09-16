@@ -11,11 +11,15 @@
         <module>meereen-commons</module>
         <module>meereen-authorization</module>
         <module>meereen-core</module>
+        <module>meereen-system</module>
     </modules>
     <packaging>pom</packaging>
 
     <name>meereen</name>
     <url>http://www.tyebile.com</url>
+    <description>meereen
+        是一个用于快速搭建企业后台管理系统的基础项目,集成一揽子便捷功能如:通用增删改查，在线代码生成，权限管理(可控制到列和行)，动态多数据源分布式事务，动态脚本，动态定时任务，在线数据库维护等等
+    </description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -25,6 +29,7 @@
         <project.build.jdk>${java.version}</project.build.jdk>
 
         <spring.boot.version>1.4.5.RELEASE</spring.boot.version>
+        <spring.version>5.0.6.RELEASE</spring.version>
 
         <javassist.version>3.20.0-GA</javassist.version>
 
@@ -95,6 +100,17 @@
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
                 <version>${fastjson.version}</version>
+            </dependency>
+            <!-- spring -->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-webmvc</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>${spring.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
