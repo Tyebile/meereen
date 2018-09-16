@@ -12,15 +12,11 @@
     <artifactId>meereen-commons-service</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>meereen-commons-service-simple</module>
         <module>meereen-commons-service-api</module>
     </modules>
 
     <dependencies>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
-        </dependency>
+
     </dependencies>
 
 </project>

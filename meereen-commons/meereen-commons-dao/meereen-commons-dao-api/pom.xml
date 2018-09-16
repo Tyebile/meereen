@@ -12,15 +12,6 @@
     <artifactId>meereen-commons-dao-api</artifactId>
 
     <dependencies>
-        <dependency>
-            <groupId>com.tyebile</groupId>
-            <artifactId>meereen-commons-entity</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.tyebile</groupId>
-            <artifactId>meereen-utils</artifactId>
-            <version>${project.version}</version>
-        </dependency>
+
     </dependencies>
 </project>

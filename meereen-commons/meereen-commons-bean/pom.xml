@@ -12,19 +12,6 @@
     <artifactId>meereen-commons-bean</artifactId>
 
     <dependencies>
-        <dependency>
-            <groupId>com.tyebile</groupId>
-            <artifactId>meereen-core</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-validator</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
-            <optional>true</optional>
-        </dependency>
+
     </dependencies>
 </project>

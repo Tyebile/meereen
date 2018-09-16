@@ -11,5 +11,11 @@
 
     <artifactId>meereen-authorization-api</artifactId>
 
-
+    <dependencies>
+        <dependency>
+            <groupId>com.tyebile</groupId>
+            <artifactId>meereen-core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
 </project>
