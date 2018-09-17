@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>meereen-core</artifactId>
+    <artifactId>meereen-utils</artifactId>
     <build>
         <plugins>
             <plugin>
@@ -24,9 +24,18 @@
     </build>
 
     <dependencies>
+        <!--中文转拼音-->
         <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
+            <groupId>com.belerweb</groupId>
+            <artifactId>pinyin4j</artifactId>
+            <version>2.5.0</version>
+            <optional>true</optional>
+        </dependency>
+        <!--时间解析-->
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+            <version>2.7</version>
         </dependency>
     </dependencies>
 </project>

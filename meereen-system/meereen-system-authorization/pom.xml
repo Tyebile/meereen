@@ -14,6 +14,7 @@
     <modules>
         <module>meereen-system-authorization-starter</module>
         <module>meereen-system-authorization-api</module>
+        <module>meereen-system-authorization-local</module>
     </modules>
 
 

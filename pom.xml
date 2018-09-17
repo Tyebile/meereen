@@ -13,6 +13,7 @@
         <module>meereen-core</module>
         <module>meereen-system</module>
         <module>meereen-starter</module>
+        <module>meereen-utils</module>
     </modules>
     <packaging>pom</packaging>
 
