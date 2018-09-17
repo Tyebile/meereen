@@ -1,9 +1,7 @@
-package org.hswebframework.web.authorization.basic.web;
+package com.tyebile.meereen.authorization.basic.web;
 
 /**
  * 令牌解析结果
- *
- * @author zhouhao
  */
 public interface ParsedToken {
     /**

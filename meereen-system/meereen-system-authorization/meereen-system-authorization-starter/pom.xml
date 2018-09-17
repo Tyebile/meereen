@@ -11,5 +11,17 @@
 
     <artifactId>meereen-system-authorization-starter</artifactId>
 
-
+    <dependencies>
+        <dependency>
+            <groupId>com.tyebile</groupId>
+            <artifactId>meereen-authorization-basic</artifactId>
+            <version>${project.version}</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>com.tyebile</groupId>
+            <artifactId>meereen-spring-boot-starter</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
 </project>

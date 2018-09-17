@@ -16,13 +16,10 @@
  *
  */
 
-package org.hswebframework.web.authorization;
+package com.tyebile.meereen.authorization.api;
 
 /**
  * 授权信息初始化服务接口,使用该接口初始化用的权限信息
- *
- * @author zhouhao
- * @since 3.0
  */
 public interface AuthenticationInitializeService {
     /**
